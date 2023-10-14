@@ -17,7 +17,7 @@ public class BusinessWithUsPageTest extends TestBase {
     @Tag("smoke")
     @Tag("all_tests")
     @DisplayName("Checking the \"Business With Us\" page")
-    void checkingTheCentralPageTest() {
+    void checkingTheBusinessWithUsTest() {
         step("Opening a web page", () -> {
             businessWithUsPage
                     .openPage();

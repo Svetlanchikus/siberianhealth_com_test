@@ -17,8 +17,8 @@ public class CompanyNewsPageTest extends TestBase {
     @Test
     @Tag("smoke")
     @Tag("all_tests")
-    @DisplayName("Checking the company news page")
-    void checkingTheCentralPageTest() {
+    @DisplayName("Checking the \"Company news\" page")
+    void checkingTheCompanyNewsPageTest() {
         step("Opening a web page", () -> {
             companyNewsPage
                     .openPage();

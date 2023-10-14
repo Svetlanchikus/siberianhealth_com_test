@@ -16,7 +16,7 @@ public class CentralPageTest extends TestBase {
     @Test
     @Tag("smoke")
     @Tag("all_tests")
-    @DisplayName("Checking the central page")
+    @DisplayName("Checking the \"Central\" page")
     void checkingTheCentralPageTest() {
         step("Opening a web page", () -> {
             centralForm

@@ -10,9 +10,7 @@ public class HeaderAllPage {
 
         return this;
     }
-
     public HeaderAllPage checkingMenuOnSite() {
-
         $(".sw21-header-nav__item > span").shouldHave(text("Продукты"));
         $(".sw21-header-nav__item:nth-child(2) span").shouldHave(text("О компании"));
         $(".sw21-header-nav__item:nth-child(2) span").shouldHave(text("О компании"));
@@ -23,7 +21,6 @@ public class HeaderAllPage {
     }
 
     public HeaderAllPage checkingMenuButtons() {
-
         $(".sw21-snippet-icon-button__text > span").shouldHave(text("Магазин"));
         $(".sw21-snippet-icon-button__text > span").click();
         $(".modal-country").shouldHave(text("Выберите страну:"));
