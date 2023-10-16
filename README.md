@@ -1,4 +1,4 @@
-# Проект по автоматизации тестовых сценариев для сайта компании [Сибирское здоровье](https://siberianhealth.com/ru))
+# Проект по автоматизации тестовых сценариев для сайта компании [Сибирское здоровье](https://siberianhealth.com/ru)
 
 [![images](assets/images/logo_company.jpg)](https://siberianhealth.com/ru)
 
