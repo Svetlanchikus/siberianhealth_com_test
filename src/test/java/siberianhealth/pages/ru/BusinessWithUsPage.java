@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class BusinessWithUsPage {
     public BusinessWithUsPage openPage() {
-        open("/ru/business");
+        open("/business");
 
         return this;
     }

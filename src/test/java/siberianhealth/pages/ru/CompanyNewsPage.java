@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class CompanyNewsPage {
     public CompanyNewsPage openPage() {
-        open("/ru/news");
+        open("/news");
 
         return this;
     }

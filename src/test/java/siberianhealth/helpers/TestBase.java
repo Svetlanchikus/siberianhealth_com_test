@@ -3,35 +3,39 @@ package siberianhealth.helpers;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import siberianhealth.config.WebDriverConfig;
 
 import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
+    static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://siberianhealth.com";
 
-        String browserServer = System.getProperty("browserServer");
-        String serverCreds = System.getProperty("serverCreds");
-        Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.browserSize = System.getProperty("browserSize");
+        Configuration.baseUrl = config.getBaseUrl();
+        Configuration.browser = config.getBrowser();
+        Configuration.browserVersion = config.getBrowserVersion();
+        Configuration.browserSize = config.getBrowserSize();
         Configuration.pageLoadStrategy = "eager";
-        Configuration.remote = "https://" + serverCreds + browserServer +"/wd/hub";
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
+        if (config.isRemote()) {
+            Configuration.remote = config.getRemoteUrl();
 
-        Configuration.browserCapabilities = capabilities;
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+            Configuration.browserCapabilities = capabilities;
+        }
     }
 
     @BeforeEach

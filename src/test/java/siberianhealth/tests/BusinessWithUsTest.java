@@ -4,22 +4,22 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import siberianhealth.helpers.TestBase;
-import siberianhealth.pages.ru.AboutUsPage;
-import siberianhealth.pages.ru.HeaderAllPage;
+import siberianhealth.pages.ru.BusinessWithUsPage;
+import siberianhealth.pages.ru.Component.HeaderPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class AboutUsPageTest extends TestBase {
-    AboutUsPage aboutUsPage = new AboutUsPage();
-    HeaderAllPage headerAllPage = new HeaderAllPage();
+public class BusinessWithUsTest extends TestBase {
+    BusinessWithUsPage businessWithUsPage = new BusinessWithUsPage();
+    HeaderPage headerAllPage = new HeaderPage();
 
     @Test
     @Tag("smoke")
     @Tag("all_tests")
-    @DisplayName("Checking the \"About Us\" page")
-    void checkingTheAboutUsPageTest() {
+    @DisplayName("Checking the \"Business With Us\" page")
+    void checkingTheBusinessWithUsTest() {
         step("Opening a web page", () -> {
-            aboutUsPage
+            businessWithUsPage
                     .openPage();
         });
 
@@ -30,7 +30,7 @@ public class AboutUsPageTest extends TestBase {
         });
 
         step("Checking the page composition", () -> {
-            aboutUsPage
+            businessWithUsPage
                     .CheckingPageComposition();
         });
     }

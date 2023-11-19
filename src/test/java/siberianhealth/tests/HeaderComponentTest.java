@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import siberianhealth.helpers.TestBase;
 import siberianhealth.pages.ru.CentralPage;
-import siberianhealth.pages.ru.HeaderAllPage;
+import siberianhealth.pages.ru.Component.HeaderPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class HeaderAllPageTest extends TestBase {
+public class HeaderComponentTest extends TestBase {
 
     CentralPage centralForm = new CentralPage();
-    HeaderAllPage headerAllPage = new HeaderAllPage();
+    HeaderPage headerAllPage = new HeaderPage();
 
     @Test
     @Tag("all_tests")

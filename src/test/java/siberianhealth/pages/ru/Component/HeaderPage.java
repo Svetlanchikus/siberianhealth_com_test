@@ -1,16 +1,16 @@
-package siberianhealth.pages.ru;
+package siberianhealth.pages.ru.Component;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class HeaderAllPage {
+public class HeaderPage {
 
-    public HeaderAllPage openProductsMenu() {
+    public HeaderPage openProductsMenu() {
         $(".sw21-header-nav__item > span").click();
 
         return this;
     }
-    public HeaderAllPage checkingMenuOnSite() {
+    public HeaderPage checkingMenuOnSite() {
         $(".sw21-header-nav__item > span").shouldHave(text("Продукты"));
         $(".sw21-header-nav__item:nth-child(2) span").shouldHave(text("О компании"));
         $(".sw21-header-nav__item:nth-child(2) span").shouldHave(text("О компании"));
@@ -20,7 +20,7 @@ public class HeaderAllPage {
         return this;
     }
 
-    public HeaderAllPage checkingMenuButtons() {
+    public HeaderPage checkingMenuButtons() {
         $(".sw21-snippet-icon-button__text > span").shouldHave(text("Магазин"));
         $(".sw21-snippet-icon-button__text > span").click();
         $(".modal-country").shouldHave(text("Выберите страну:"));
@@ -32,7 +32,7 @@ public class HeaderAllPage {
         return this;
     }
 
-    public HeaderAllPage checkingProductsMenu() {
+    public HeaderPage checkingProductsMenu() {
         $(".menu-desktop__list-item:nth-child(1)").shouldHave(text("Здоровье"));
         $(".menu-desktop__list-item:nth-child(2)").shouldHave(text("Спорт"));
         $(".menu-desktop__list-item:nth-child(3)").shouldHave(text("Питание"));

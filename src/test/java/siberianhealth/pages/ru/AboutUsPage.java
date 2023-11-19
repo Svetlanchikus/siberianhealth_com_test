@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class AboutUsPage {
     public AboutUsPage openPage() {
-        open("/ru/about");
+        open("/about");
 
         return this;
     }

@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class CentralPage {
     public CentralPage openPage() {
-        open("/ru");
+        open("");
 
         return this;
     }
