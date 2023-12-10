@@ -5,14 +5,13 @@
 ## Содержание:
 + [Стек технологий](#стек-технологий)  
 + [Тестовые сценарии](#Тестовые-сценарии)
++ [Запуск тестов из терминала](#Запуск-тестов-терминала)
 + [Сборка в Jenkins](#Сборка-в-Jenkins)
-+ [Команды запуска тестов в терминале](#Команды-запуска-тестов-в-терминале)
 + [Интеграция с Allure report](#Интеграция-с-Allure-report)
-+ [Видео прохождения тестов](#cinema-Пример-видео-прохождения-тестов)
-+ [Интеграция с Jira](#-Интеграция-с-Jira)
 + [Информирование в Telegram](#Информирование-в-Telegram)
++ [Пример прогона теста в Selenoid](#Пример-прогона-теста-Selenoid)
 
-## <a name="стек-технологий"></a>Стек технологий
+## <a name="стек-технологий"></a>Стек технологий:
 <p align="center">
 <a href="https://www.java.com/"><img src="assets/images/Java.svg" width="50" height="50"  alt="Java"/></a>
 <a href="https://github.com/"><img src="assets/images/GitHub.svg" width="50" height="50"  alt="Github"/></a>
@@ -26,70 +25,70 @@
 <a href="https://telegram.org/"><img src="assets/images/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
 
-## <a name="Тестовые-сценарии"></a>Тестовые сценарии
+`Gradle` - используется как инструмент автоматизации сборки.  \
+`JUnit5` - для выполнения тестов.\
+`Selenide` - это фреймворк для автоматизированного тестирования веб-приложений на основе Selenium WebDriver.\
+`Jenkins` - CI/CD для запуска тестов удаленно.\
+`Allure Report` - для визуализации результатов тестирования.\
+`Telegram Bot` - для уведомлений о результатах тестирования.\
+`Allure Report` - нструмент для создания отчетов об автоматизированных тестах.
+
+## <a name="Тестовые-сценарии"></a>Тестовые сценарии:
 - Проверка центральной страницы
 - Проверка шапки сайта
 - Проверка страницы "О нас"
-- Проверка стараницы "Новости компании"
-- Проверка старинцы "Начни бизнес с нами"
+- Проверка страницы "Новости компании"
+- Проверка страницы "Начни бизнес с нами"
+- Проверка страницы с товаром
+  
+## <a name="Запуск-тестов-терминала">Запуск тестов из терминала: </a>
 
-## <a name="Сборка-в-Jenkins"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/sveta_siberianhealth_com_test/)
+```
+gradle clean test  
+```
+
+## <a name="Сборка-в-Jenkins"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/sveta_siberianhealth_com_test/):
+
+Для запуска необходимо нажать "Build with Parameters":
 
 <p align="center">
-<img src="assets/screenshots/JenkinsScreenshot.jpg" alt="Jenkins Build">
+<img src="assets/screenshots/JenkinsScreenshot.png" alt="Jenkins Build">
 </p>
 
-### Параметры сборки проекта
+### Параметры сборки проекта:
 
 | Параметр        | Назначение                               |
 |-----------------|------------------------------------------|
-| TASK            | Опция выбора запуска определённых тестов |
-| SELENOID_URL    | Удаленный сервер для запуска тестов      |
+| BASE_URL        | Адрес тестируемого сайта                 |
 | BROWSER         | Браузер для запуска                      |
 | BROWSER_VERSION | Версия браузера                          |
 | BROWSER_SIZE    | Разрешение экрана                        |
 | COMMENT         | Комментарий                              |
+| REMOTE_URL      | Удаленный сервер для запуска тестов      |
 
-## <a name="Команды-запуска-тестов-в-терминале"></a>Команды запуска тестов в терминале
-```bash
-gradle clean
-${TASK}
--DbrowserServer=${BROWSER_SERVER}
--DserverCreds=${SERVER_CREDS}
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
-```
+## <a name="Интеграция-с-Allure-report"></a>Интеграция с [Allure report](https://jenkins.autotests.cloud/job/sveta_siberianhealth_com_test/22/allure/):
 
-## <a name="Интеграция-с-Allure-report"></a>Интеграция с [Allure report](https://jenkins.autotests.cloud/job/sveta_siberianhealth_com_test/6/allure/)
-
-### Главная страница отчета
+### Главная страница отчета:
 <p align="center">
-<img src="assets/screenshots/Allure-report.jpg" alt="Allure report">
+<img src="assets/screenshots/Allure-report_2.jpg" alt="Allure report">
 </p>
 
-### Тест-кейсы
+### Тест-кейсы:
 
 <p align="center">
-<img src="assets/screenshots/Allure-testCase.jpg" alt="Test Case">
+<img src="assets/screenshots/Allure-testCase_2.jpg" alt="Test Case">
 </p>
 
-### Графики
+## <a name="Информирование-в-Telegram"></a>Информирование в Telegram:
+
+### Уведомление из переписки с чат ботом:
 
 <p align="center">
-<img src="assets/screenshots/Allure-graph.jpg" alt="Allure-graph">
-</p>
-
-## <a name="Информирование-в-Telegram"></a>Информирование в Telegram
-
-### Уведомление из переписки с чат ботом
-
-<p align="center">
-<img src="assets/screenshots/Telegram.jpg" alt="TestOps launch">
+<img src="assets/screenshots/Telegram_2.png" alt="Telegram">
 </p>
 
 
-#### Содержание уведомления в Telegram
+### Содержание уведомления в Telegram:
 
 - Проект
 - Комментарий
@@ -97,3 +96,9 @@ ${TASK}
 - Общее количество сценариев
 - Процент прохождения тестов
 - Ссылка на Allure отчет
+
+## <a name="Пример-прогона-теста-Selenoid"></a>Пример прогона теста в Selenoid:
+Видео к прохождению теста "Checking the products page":
+<p align="center">
+<img src="assets/screenshots/Passing-the-test.gif" alt="Passing-the-test">
+</p>
