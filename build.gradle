@@ -27,12 +27,13 @@ group 'guru.qa'
 version '1.0'
 
 dependencies {
-    testImplementation (
-            "com.codeborne:selenide:6.19.0",
+    testImplementation(
+            "com.codeborne:selenide:6.19.1",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "org.junit.jupiter:junit-jupiter:5.10.0",
             "org.slf4j:slf4j-simple:2.0.7",
-            "org.aeonbits.owner:owner:1.0.4")
+            "org.aeonbits.owner:owner:1.0.4",
+            "org.seleniumhq.selenium:selenium-java:2.41.0")
 }
 
 tasks.withType(JavaCompile) {
@@ -46,7 +47,7 @@ test {
 
 task smoke_test(type: Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeTags("smoke")
     }
 }

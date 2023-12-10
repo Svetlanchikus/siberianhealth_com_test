@@ -19,7 +19,7 @@ public interface  WebDriverConfig extends Config{
     String getBrowserVersion();
 
     @Key("browserSize")
-    @DefaultValue("1920x1080")
+    @DefaultValue("1280x800")
     String getBrowserSize();
 
     @Key("isRemote")
@@ -27,5 +27,6 @@ public interface  WebDriverConfig extends Config{
     Boolean isRemote();
 
     @Key("remoteUrl")
+    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
     String getRemoteUrl();
 }
