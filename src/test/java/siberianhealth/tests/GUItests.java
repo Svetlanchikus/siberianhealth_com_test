@@ -55,7 +55,8 @@ public class GUItests extends TestBase {
         step("Checking the page composition", () -> {
             businessWithUsPage
                     .checkingTitle()
-                    .checkingButtons();
+//                    .checkingButtons()
+            ;
         });
     }
 

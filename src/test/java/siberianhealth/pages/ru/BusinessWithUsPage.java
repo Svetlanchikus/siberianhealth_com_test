@@ -65,6 +65,7 @@ public class BusinessWithUsPage {
     public BusinessWithUsPage checkingButtons() {
         businessBannerButton.shouldHave(text(businessBannerButtonText));
         businessBannerButton.click();
+        businessBannerButton.click();
         modalWindowsButton.click();
         registrationButton.shouldHave(text(registrationButtonText));
         registrationButton.click();
