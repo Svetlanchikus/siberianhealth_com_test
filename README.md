@@ -41,7 +41,7 @@
 - Проверка страницы "Начни бизнес с нами"
 - Проверка страницы с товаром
   
-## <a name="Запуск-тестов-терминала">Запуск тестов из терминала: </a>
+## <a name="Запуск-тестов-терминала">Запуск тестов из терминала:</a>
 
 ```
 gradle clean test  
@@ -66,7 +66,7 @@ gradle clean test
 | COMMENT         | Комментарий                              |
 | REMOTE_URL      | Удаленный сервер для запуска тестов      |
 
-## <a name="Интеграция-с-Allure-report"></a>Интеграция с [Allure report](https://jenkins.autotests.cloud/job/sveta_siberianhealth_com_test/22/allure/):
+## <a name="Интеграция-с-Allure-report"></a>Интеграция с [Allure report](https://jenkins.autotests.cloud/job/sveta_siberianhealth_com_test/allure/):
 
 ### Главная страница отчета:
 <p align="center">
@@ -97,7 +97,7 @@ gradle clean test
 - Процент прохождения тестов
 - Ссылка на Allure отчет
 
-## <a name="Пример-прогона-теста-Selenoid"></a>Пример прогона теста в Selenoid:
+## <a name="Пример-прогона-теста-Selenoid">Пример прогона теста в Selenoid:</a>
 Видео к прохождению теста "Checking the products page":
 <p align="center">
 <img src="assets/screenshots/Passing-the-test.gif" alt="Passing-the-test">
