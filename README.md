@@ -9,7 +9,7 @@
 + [Сборка в Jenkins](#Сборка-в-Jenkins)
 + [Интеграция с Allure report](#Интеграция-с-Allure-report)
 + [Информирование в Telegram](#Информирование-в-Telegram)
-+ [Пример прогона теста в Selenoid](#Пример-прогона-теста-Selenoid)
++ [Пример прогона теста в Selenoid](#пример-прогона-теста-selenoid)
 
 ## <a name="стек-технологий"></a>Стек технологий:
 <p align="center">
@@ -97,7 +97,7 @@ gradle clean test
 - Процент прохождения тестов
 - Ссылка на Allure отчет
 
-## <a name="Пример-прогона-теста-Selenoid">Пример прогона теста в Selenoid:</a>
+## <a name="пример-прогона-теста-selenoid"></a>Пример прогона теста в Selenoid:
 Видео к прохождению теста "Checking the products page":
 <p align="center">
 <img src="assets/screenshots/Passing-the-test.gif" alt="Passing-the-test">
