@@ -10,6 +10,8 @@
 + [Интеграция с Allure report](#Интеграция-с-Allure-report)
 + [Информирование в Telegram](#Информирование-в-Telegram)
 + [Пример прогона теста в Selenoid](#пример-прогона-теста-selenoid)
++ [Интеграция с Allure TestOps](#интеграция-allure-testops)
++ [Интеграция с Jira](#интеграция-jira)
 
 ## <a name="стек-технологий"></a>Стек технологий:
 <p align="center">
@@ -101,4 +103,17 @@ gradle clean test
 Видео к прохождению теста "Checking the products page":
 <p align="center">
 <img src="assets/screenshots/Passing-the-test.gif" alt="Passing-the-test">
+</p>
+
+## <a name="интеграция-allure-testops">Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3877/dashboards):</a>
+> Ссылка доступна только авторизованным пользователям.
+
+<p align="center">
+<img src="assets/screenshots/Allure_TestOps.png" alt="Allure_TestOps">
+</p>
+
+## <a name="интеграция-jira">Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1001):</a>
+
+<p align="center">
+<img src="assets/screenshots/Jira.png" alt="Jira">
 </p>
