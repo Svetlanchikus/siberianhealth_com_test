@@ -25,6 +25,8 @@
 <a href="https://www.jenkins.io/"><img src="assets/images/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="assets/images/Allure_Report.svg" width="50" height="50"  alt="Allure Reports"/></a>
 <a href="https://telegram.org/"><img src="assets/images/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-1001"><img src="assets/screenshots/jira-logo.svg" width="50" height="50"  alt="jira"/></a>
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-1001"><img src="assets/screenshots/allure-ee-logo.svg" width="50" height="50"  alt="jira"/></a>
 </p>
 
 `Gradle` - используется как инструмент автоматизации сборки.  \
@@ -34,6 +36,7 @@
 `Allure Report` - для визуализации результатов тестирования.\
 `Telegram Bot` - для уведомлений о результатах тестирования.\
 `Allure Report` - нструмент для создания отчетов об автоматизированных тестах.
+`Allure TestOps` - как система управления тестированием.
 
 ## <a name="Тестовые-сценарии"></a>Тестовые сценарии:
 - Проверка центральной страницы
